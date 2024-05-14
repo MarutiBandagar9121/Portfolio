@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+.home {
+    height: 100vh;
+    overflow: hidden;
+    /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
+    background-image: url(/images/sea.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    transition: ease-in-out;
+}
+
+
+
+.navbar:hover {
+    background-image: linear-gradient(to left, #434343 0%, black 100%);
+
+}
+
+.navbar i {
+    color: white;
+    margin-right: 1rem;
+}
+
+.navbar i {
+    transition: rotate 111ms ease-in-out, scale 333ms ease-in-out;
+
+    &:active {
+        rotate: 360deg;
+        scale: 0;
+    }
+
+    &:hover {
+        scale: 1.5;
+    }
+}
+
+.dropdown-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: azure;
+    right: 2rem;
+    top: 5rem;
+    z-index: 1;
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.dropdown-menu-content a {
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+}
+
+.dropdown-menu-content a:hover {
+    text-decoration: underline;
+    color: #03AED2;
+}
+
+
+.home-content {
+    padding: 1rem;
+    margin-left: 2rem;
+    /* border:2px solid red; */
+    background-color: transparent;
+    opacity: 0.8;
+    height: 100%;
+}
+
+.home-content p {
+    color: black;
+    font-size: 2rem;
+    /* font-weight: 1000; */
+
+}
+
+.home-content h1 {
+    color: #FC4100;
+    font-size: 3rem;
+    /* font-weight: 1000; */
+
+
+}
+
+#auto-text {
+    color: #430A5D;
+    font-size: 2.5rem;
+}
+
+#skills {
+    /* border: 2px solid red; */
+    padding: 2rem;
+    /* background-image: linear-gradient(to right, #141e30, #243b55); */
+    /* background-image: linear-gradient(to left, #30cfd0 0%, #330867 100%); */
+    /* background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% ); */
+    background-color: #7B66FF;
+}
+.div-title {
+    color: white;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.skill-container{
+    border:2px solid white;
+    border-radius:10px;
+    padding:1rem;
+    margin:1rem;
+}
+.skill-container-title{
+    border-color: white;
+    border-style:solid;
+    border-width: 0 0 2px 0;
+    margin-bottom:1rem;
+    color:white;
+    font-weight:400;
+    font-size:1.5rem;
+}
+.skill-container-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill-elment{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:1rem;
+    color:white;
+}
+.skill-elment img{
+    width:80px;
+    
+}
+#projects {
+    /* border: 2px solid red; */
+    padding: 2rem;
+    /* background-image: linear-gradient(to right, #141e30, #243b55); */
+    background-image: linear-gradient(to left, #5176e6 0%, #330867 100%);}
+.project-container{
+    border:2px solid white;
+    border-radius:10px;
+    padding:1rem;
+    margin:1rem;
+}
+.project-title{
+    color: white;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.project-description{
+    color:white;
+    margin:1rem;
+    line-height: 2rem;
+}
+.project-container-content{
+    margin-left: 1rem;
+    color:white;
+}
+.project-container-content ul{
+    margin-left:3rem;
+}
+.project-tech-stack-title{
+    font-size: 1rem;
+    color: white;
+}
+.project-button{
+    padding:0.4rem 1rem;
+    /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+    background-color: transparent;
+    color:white;
+    border:1px solid white;
+    border-radius:10px;
+    margin-bottom: 1rem;
+}
+.project-button:hover{
+    border:2px solid #0A6847;
+    background-image: linear-gradient(to left, #434343 0%, black 100%);
+    
+}
+.project-link{
+    color:black;
+
+}
+.project-link:hover{
+    font-weight: 800;
+    
+}
+
+#education{
+    width:100%;
+    background-image: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+   
+}
+#education .div-title{
+    margin-left:1rem;
+    z-index: 1;
+    /* color:black; */
+}
+.edu-element{
+    margin:1.5rem;
+    padding:1rem;
+    border:2px solid white;
+    background-color: transparent;
+    border-radius:10px;
+    z-index: 1;
+    
+}
+
+.edu-element-title{
+    color:black;
+    font-weight:600;
+    font-size: 1.5rem;
+}
+.edu-element-data{
+    margin-left:2rem;
+    font-weight:600;
+}
+#aboutme{
+    width:100%;
+    padding:2rem;
+    /* background-image: linear-gradient( 109.6deg,  rgba(217,67,67,1) 11.2%, rgba(242,106,75,1) 100.6% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(38,51,97,1) 0%, rgba(65,143,222,1) 79% );    color:white;
+}
+.about-me-content{
+    width:100%;
+    
+    /* height:100vh; */
+    /* border:2px solid red; */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    /* justify-content: flex-start; */
+}
+.about-me-content-one{
+   
+    border-style: solid;
+    border-color: white;
+    border-width: 0 2px 0 0;
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.about-me-content-one a{
+    color:black;
+}
+.about-me-content-one-info{
+    margin-top:3rem;
+}
+.about-me-content-two{
+    /* border:2px solid green; */
+    width:50%;
+    padding:1rem;
+}
+.about-me-image-container{
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 2px 0;
+}
+.about-me-image-container img{
+    /* background-color: black; */
+    background-color: transparent;
+    /* background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% ); */
+    /* border-radius: 50%; */
+    width:250px;
+    height:250px;
+}
+.workexperience{
+    width:100%;
+    /* border:2px solid red;
+    height:500px; */
+    background-image: linear-gradient( 90.1deg,  rgba(84,212,228,1) 0.2%, rgba(68,36,164,1) 99.9% );
+    padding:2rem;
+}
+#contact{
+    width:100%;
+    padding:2rem;
+    background-color: #0A6847;
+}
+.contact-btn{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding:0.5rem 1rem;
+    border-radius: 10px;
+    background-image: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );    border:2px solid black;
+    margin:1rem;
+    width:9rem;
+    
+}
+.contact-btn a{
+    text-decoration: none;
+}
+.contact-btn-div{
+    width:50%;
+    /* border:2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding:2rem;
+}
+.contact-btn :hover{
+   color:white;
+}
+.contact-btn span{
+    margin:0.5rem;
+}
+@media(max-width:900px) {
+    body{
+        font-size: 0.8rem;
+    }
+    #auto-text::before {
+        content: '\A';
+        white-space: pre;
+    }
+    .skill-elment img{
+        width:50px;
+        
+    }
+    #projects {
+        padding: 1rem;;
+    }
+    .project-description{
+        font-size: 1rem;
+    }
+    .about-me-content-one{
+        width:100%;
+        border-width:0;
+    }
+    .about-me-content-two{
+        width:100%;
+        font-size: 0.8rem;;
+    }
+    .about-me-content-one-info{
+        margin-left: 2rem;
+    }
+}
