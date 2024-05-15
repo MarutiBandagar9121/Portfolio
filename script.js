@@ -1,5 +1,5 @@
 const typingText = Typify("#auto-text", {
-  text: ["Developer !", "FrontEnd Developer !", "BackEnd Developer !"],
+  text: ["Computer Enthusiast !","Coder","Developer !"],
   delay: 100,
   loop: true,
   cursor: true,
