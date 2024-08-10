@@ -12,6 +12,10 @@
 html {
     scroll-behavior: smooth;
 }
+body{
+    max-width: 1300px;
+    margin:0 auto;
+}
 .home {
     height: 100vh;
     overflow: hidden;
@@ -106,18 +110,13 @@ html {
 
 #skills {
     padding: 2rem;
-    background-color: #F6F5F5;
+    background-color: rgb(250, 249, 246);
 }
 .div-title {
     color: black;
     font-weight: 1000;
     font-style: normal;
     font-size: 2rem;
-}
-.skills-parent-container{
-    width:90%;
-    margin:0 auto;
-    position: relative;
 }
 .prev-button{
     position: absolute;
@@ -127,29 +126,39 @@ html {
 .next-button{
     position: absolute;
     top:50%;
-    left:100%;
-
+    right:-20px;
 }
 
+.skills-parent-container{
+    max-width:80vw;
+    margin:0 auto;
+}
+
+.slider-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:30px;
+    /* border:2px solid blue; */
+}
 .skill-container{
     border:2px solid black;
-    width:fit-content !important;
     border-radius:10px;
     padding:1rem;
     margin:1rem;
-    /* max-width: 60%!important; */
+    width: 500px;
 }
 .skill-container-title{
     border-color: black;
     border-style:solid;
     border-width: 0 0 2px 0;
-    margin-bottom:1rem;
     color:black;
     font-weight:400;
     font-size:1.5rem;
 }
 .skill-container-elements{
-    max-width:700px;
+    width:100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,6 +171,10 @@ html {
     flex-direction: column;
     margin:1rem;
     color:black;
+}
+.skill-elment svg{
+    width:3rem;
+    height:3rem;
 }
 
 #projects {
@@ -343,10 +356,10 @@ html {
         content: '\A';
         white-space: pre;
     }
-    .skill-elment img{
+    /* .skill-elment img{
         width:50px;
         
-    }
+    } */
     #projects {
         padding: 1rem;;
     }

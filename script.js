@@ -30,17 +30,28 @@ $(document).ready(function () {
 
   
 
-$('.skills-parent-container').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true,
+// $('.xxx').slick({
+//   slidesToShow: 1,
+//   slidesToScroll:1,
+//   dots: true,
+//   infinite: true,
+//   speed: 300,
+//   centerMode: false,
+//   variableWidth: true,
+//   // autoplay:true,
+//   // autoplaySpeed: 1000,
+//   draggable:true,
+//   prevArrow:'<i class="fa-solid fa-circle-chevron-left fa-lg prev-button" style="color: #000000;"></i>',
+//   nextArrow:'<i class="fa-solid fa-circle-chevron-right fa-lg next-button" style="color: #000000;"></i>',
+// });
+$(".owl-carousel").owlCarousel({
+ 
+  items:1,
+  margin:40,
+  loop:true,
   autoplay:true,
-  autoplaySpeed: 1000,
-  draggable:true,
-  prevArrow:'<i class="fa-solid fa-circle-chevron-left fa-lg prev-button" style="color: #000000;"></i>',
-  nextArrow:'<i class="fa-solid fa-circle-chevron-right fa-lg next-button" style="color: #000000;"></i>'
+  autoplayTimeout:2000,
+  dots:true,
+  autoplayHoverPause:true
 });
 });
