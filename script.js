@@ -1,5 +1,5 @@
 const typingText = Typify("#auto-text", {
-  text: ["Web Developer!","Digital Dreamer","Code Creator"],
+  text: ["Web Developer!","Digital Dreamer!","Code Creator!"],
   delay: 100,
   loop: true,
   cursor: true,
@@ -18,6 +18,37 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 $(document).ready(function () {
+
+  const cardButtons = document.querySelectorAll('.toggle-button');
+  cardButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the closest parent with the class 'card'
+        const card = this.closest('.card');
+        
+        // Find the 'card-right' div within that card
+        const cardRight = card.querySelector('.card-right');
+        
+        const allCardRights = document.querySelectorAll('.card-right');
+        allCardRights.forEach(right => {
+            if (right !== cardRight && right.style.display === 'flex') {
+                right.style.display = 'none'; // Hide other card-right divs
+                right.closest('.card').style.width = '30%';            }
+        });
+
+        // Toggle the display property between 'flex' and 'none'
+        if (cardRight.style.display === 'flex') {
+            cardRight.style.display = 'none';
+            card.style.width='30%';
+        } else {
+            cardRight.style.display = 'flex';
+            card.style.width='fit-content';
+        }
+    });
+});
+
+
+
+
   $(".dropdown-menu-content").hide();
   $(".dropdown-menu-btn i").click(function () {
     // $(".dropdown-menu-content").css('display','flex');
@@ -27,31 +58,15 @@ $(document).ready(function () {
   $(".dropdown-menu-content a").click(function () {
     $(".dropdown-menu-content").toggle();
   });
-
-  
-
-// $('.xxx').slick({
-//   slidesToShow: 1,
-//   slidesToScroll:1,
-//   dots: true,
-//   infinite: true,
-//   speed: 300,
-//   centerMode: false,
-//   variableWidth: true,
-//   // autoplay:true,
-//   // autoplaySpeed: 1000,
-//   draggable:true,
-//   prevArrow:'<i class="fa-solid fa-circle-chevron-left fa-lg prev-button" style="color: #000000;"></i>',
-//   nextArrow:'<i class="fa-solid fa-circle-chevron-right fa-lg next-button" style="color: #000000;"></i>',
-// });
 $(".owl-carousel").owlCarousel({
- 
   items:1,
   margin:40,
   loop:true,
   autoplay:true,
   autoplayTimeout:2000,
   dots:true,
-  autoplayHoverPause:true
+  autoplayHoverPause:true,
+  nav:true,
+  navText: ['<img src="./images/prev-arrow.png" alt="" class="nav-arrow nav-prev">','<img src="./images/prev-arrow.png"alt="" class="nav-arrow nav-next">']
 });
 });

@@ -1,3 +1,9 @@
+.project-card{
+    width:200px;
+    height:400px;
+    border:2px solid green;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -67,6 +73,7 @@ body{
     right: 2rem;
     top: 5rem;
     z-index: 1;
+    border-radius: 20px;
     background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
 }
 
@@ -132,6 +139,24 @@ body{
 .skills-parent-container{
     max-width:80vw;
     margin:0 auto;
+    position: relative;
+}
+.owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border:2px solid red; */
+}
+.nav-arrow{
+    width: 20px!important;
+}
+ .nav-next {
+    transform: rotate(180deg);
 }
 
 .slider-container{
@@ -150,6 +175,8 @@ body{
 }
 .skill-container-title{
     border-color: black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     border-style:solid;
     border-width: 0 0 2px 0;
     color:black;
@@ -177,43 +204,45 @@ body{
     height:3rem;
 }
 
+
 #projects {
     padding: 2rem;
-    background-image: linear-gradient(to left, #5176e6 0%, #330867 100%);}
+    /* background-image: linear-gradient(to left, #5176e6 0%, #330867 100%); */
+}
 .project-container{
-    border:2px solid white;
+    border:2px solid black;
     border-radius:10px;
     padding:1rem;
     margin:1rem;
 }
 .project-title{
-    color: white;
+    color: black;
     font-weight: 1000;
     font-style: normal;
     font-size: 1.5rem;
     text-decoration: underline;
 }
 .project-description{
-    color:white;
+    color:black;
     margin:1rem;
     line-height: 2rem;
 }
 .project-container-content{
     margin-left: 1rem;
-    color:white;
+    color:black;
 }
 .project-container-content ul{
     margin-left:3rem;
 }
 .project-tech-stack-title{
     font-size: 1rem;
-    color: white;
+    color: black;
 }
 .project-button{
     padding:0.4rem 1rem;
     background-color: transparent;
-    color:white;
-    border:1px solid white;
+    color:black;
+    border:1px solid black;
     border-radius:10px;
     margin-bottom: 1rem;
 }
