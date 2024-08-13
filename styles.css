@@ -18,8 +18,28 @@ html {
 body {
   max-width: 1300px;
   margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
+@media (max-width: 768px) { /* tablet */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 480px) { /* mobile */
+  body {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 320px) { /* small mobile */
+  body {
+    font-size: 10px;
+    line-height: 1.25;
+  }
+}
 .home {
   height: 100vh;
   overflow: hidden;
@@ -134,7 +154,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 30px;
-  /* border:2px solid blue; */
 }
 #skills .skills-parent-container .slider-container .skill-container {
   border: 2px solid black;
@@ -172,6 +191,33 @@ body {
   width: 3rem;
   height: 3rem;
 }
+#skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment p {
+  font-size: 1rem;
+}
+@media (max-width: 1000px) {
+  #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment img, #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+@media (max-width: 490px) {
+  #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment img, #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment svg {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 390px) {
+  #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment img, #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment svg {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment p {
+    font-size: 0.5rem;
+  }
+}
 
 .project {
   width: 100%;
@@ -184,11 +230,21 @@ body {
 .project .card {
   width: 30%;
   margin: 20px 0;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   display: flex;
   flex-direction: row;
+}
+@media (max-width: 1000px) {
+  .project .card {
+    width: 50%;
+  }
+}
+@media (max-width: 650px) {
+  .project .card {
+    width: 100%;
+  }
 }
 .project .card:hover {
   background-color: rgb(250, 249, 246);
@@ -196,6 +252,16 @@ body {
 }
 .project .card .card-left {
   width: 400px;
+}
+@media (max-width: 1000) {
+  .project .card .card-left {
+    width: 350px;
+  }
+}
+@media (max-width: 650) {
+  .project .card .card-left {
+    width: 300px;
+  }
 }
 .project .card .card-left .img-container {
   width: 100%;
@@ -210,6 +276,7 @@ body {
 }
 .project .card .card-left .content {
   padding: 10px;
+  text-align: justify;
 }
 .project .card .card-left .content .link {
   width: 100%;
@@ -223,6 +290,14 @@ body {
 }
 .project .card .card-left .content .link i:hover {
   scale: 1.2;
+}
+@media (max-width: 950px) {
+  .project .card .card-left .content .link {
+    justify-content: center;
+  }
+  .project .card .card-left .content .link .toggle-button {
+    display: none;
+  }
 }
 .project .card-right {
   width: 400px;

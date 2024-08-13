@@ -17,6 +17,29 @@ html {
 body {
   max-width: 1300px;
   margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) { /* tablet */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) { /* mobile */
+  body {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 320px) { /* small mobile */
+  body {
+    font-size: 10px;
+    line-height: 1.25;
+  }
 }
 
 .home {
@@ -140,7 +163,6 @@ body {
       align-items: center;
       justify-content: center;
       margin: 30px;
-      /* border:2px solid blue; */
       .skill-container {
         border: 2px solid black;
         border-radius: 10px;
@@ -173,7 +195,33 @@ body {
             img, svg {
               width: 3rem;
               height: 3rem;
-              // border:2px solid green;
+            }
+            p{
+              font-size: 1rem;
+            }
+            @media (max-width: 1000px) {
+              img, svg {
+                width: 1rem;
+                height: 1rem;
+              }
+            }
+            @media (max-width: 490px) {
+              img, svg {
+                width: 0.5rem;
+                height: 0.5rem;
+              }
+              p{
+                font-size: 0.7rem;
+              }
+            }
+            @media (max-width: 390px) {
+              img, svg {
+                width: 0.6rem;
+                height: 0.6rem;
+              }
+              p{
+                font-size: 0.5rem;
+              }
             }
           }
         }
@@ -192,11 +240,17 @@ body {
   .card {
     width:30%;
     margin: 20px 0;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: row;
+    @media  (max-width:1000px) {
+      width:50%;
+    }
+    @media  (max-width:650px) {
+      width:100%;
+    }
     &:hover {
       background-color: $themecolor_offwhite;
       // border:1px solid black;
@@ -206,6 +260,12 @@ body {
     }
     .card-left {
       width: 400px;
+      @media (max-width:1000){
+        width: 350px;
+      }
+      @media (max-width:650){
+        width: 300px;
+      }
       .img-container {
         width: 100%;
         height: 200px;
@@ -218,6 +278,7 @@ body {
       }
       .content {
         padding: 10px;
+        text-align: justify;
         .link {
           width: 100%;
           margin-top: 10px;
@@ -229,6 +290,12 @@ body {
           i {
             &:hover {
               scale: 1.2;
+            }
+          }
+          @media (max-width:950px){
+            justify-content: center;
+            .toggle-button{
+              display:none;
             }
           }
         }
