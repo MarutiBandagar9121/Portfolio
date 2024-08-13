@@ -283,6 +283,10 @@ body {
   padding: 10px;
   text-align: justify;
 }
+.project .card .card-left .content .title {
+  color: #fc4100;
+  font-weight: 800;
+}
 .project .card .card-left .content .link {
   width: 100%;
   margin-top: 10px;

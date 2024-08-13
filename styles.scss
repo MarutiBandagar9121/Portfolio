@@ -3,6 +3,7 @@
   width: 100%;
 }
 $themecolor_offwhite: rgb(250, 249, 246);
+$specialFontColor:#fc4100;
 * {
   margin: 0;
   padding: 0;
@@ -118,7 +119,7 @@ body {
       font-size: 2rem;
     }
     h1 {
-      color: #fc4100;
+      color: $specialFontColor;
       font-size: 3rem;
     }
     #auto-text {
@@ -284,6 +285,10 @@ body {
       .content {
         padding: 10px;
         text-align: justify;
+        .title{
+          color:$specialFontColor;
+          font-weight: 800;
+        }
         .link {
           width: 100%;
           margin-top: 10px;
