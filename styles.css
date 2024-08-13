@@ -117,10 +117,13 @@ body {
 }
 
 .div-title {
+  width: 80%;
+  margin: 0 auto;
   color: black;
   font-weight: 1000;
   font-style: normal;
   font-size: 2rem;
+  text-align: left;
 }
 
 #skills {
@@ -202,8 +205,8 @@ body {
 }
 @media (max-width: 490px) {
   #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment img, #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment svg {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   #skills .skills-parent-container .slider-container .skill-container .skill-container-elements .skill-elment p {
     font-size: 0.7rem;
@@ -239,6 +242,7 @@ body {
 @media (max-width: 1000px) {
   .project .card {
     width: 50%;
+    background-color: rgb(250, 249, 246);
   }
 }
 @media (max-width: 650px) {
@@ -303,6 +307,11 @@ body {
   width: 400px;
   display: none;
   flex-direction: column;
+}
+@media (max-width: 950px) {
+  .project .card-right {
+    width: 350px;
+  }
 }
 .project .card-right .title {
   font-size: 2rem;
